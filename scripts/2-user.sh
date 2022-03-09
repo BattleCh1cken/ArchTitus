@@ -17,12 +17,12 @@ Installing AUR Softwares
 source $HOME/BattleArch/configs/setup.conf
 
   cd ~
-  mkdir "/home/$USERNAME/.cache"
-  touch "/home/$USERNAME/.cache/zshhistory"
-  git clone "https://github.com/ChrisTitusTech/zsh"
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-  ln -s "~/zsh/.zshrc" ~/.zshrc
-
+  # mkdir "/home/$USERNAME/.cache"
+  # touch "/home/$USERNAME/.cache/zshhistory"
+  # git clone "https://github.com/ChrisTitusTech/zsh"
+  # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+  # ln -s "~/zsh/.zshrc" ~/.zshrc
+  #
 sed -n '/'$INSTALL_TYPE'/q;p' ~/BattleArch/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
@@ -58,7 +58,6 @@ export PATH=$PATH:~/.local/bin
 # Theming DE if user chose FULL installation
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "kde" ]]; then
-    cp -r ~/BattleArch/configs/.config/* ~/.config/
     pip install konsave
     konsave -i ~/BattleArch/configs/kde.knsv
     sleep 1
