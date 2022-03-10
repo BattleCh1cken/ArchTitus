@@ -17,12 +17,8 @@ Installing AUR Softwares
 source $HOME/BattleArch/configs/setup.conf
 
   cd ~
-  # mkdir "/home/$USERNAME/.cache"
-  # touch "/home/$USERNAME/.cache/zshhistory"
-  # git clone "https://github.com/ChrisTitusTech/zsh"
-  # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-  # ln -s "~/zsh/.zshrc" ~/.zshrc
-  #
+  git clone https://github.com/BattleCh1cken/dotfiles
+  sh ~/dotfiles/install.sh
 sed -n '/'$INSTALL_TYPE'/q;p' ~/BattleArch/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
