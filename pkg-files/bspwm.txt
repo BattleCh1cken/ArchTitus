@@ -1,7 +1,6 @@
 bspwm
 lightdm
 lightdm-gtk-greeter
-thunar
 lxsession
 rxvt-unicode
 --END OF MINIMAL INSTALL--

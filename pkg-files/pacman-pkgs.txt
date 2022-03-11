@@ -105,3 +105,6 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 neovim
 kitty
+starship
+exa
+ranger
