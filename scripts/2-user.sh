@@ -16,13 +16,6 @@ Installing AUR Softwares
 "
 source $HOME/BattleArch/configs/setup.conf
 
-cd ~
-git clone https://github.com/BattleCh1cken/dotfiles
-mv ~/.bashrc ~/.bashrc.old
-mv ~/.zshrc ~/.zshrc.old
-rmdir ~/.config/kitty
-sh ~/dotfiles/install.sh
-chsh $USERNAME -s /bin/zsh
 sed -n '/'$INSTALL_TYPE'/q;p' ~/BattleArch/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
