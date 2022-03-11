@@ -16,9 +16,9 @@ Installing AUR Softwares
 "
 source $HOME/BattleArch/configs/setup.conf
 
-  cd ~
-  git clone https://github.com/BattleCh1cken/dotfiles
-  sh ~/dotfiles/install.sh
+cd ~
+git clone https://github.com/BattleCh1cken/dotfiles
+sh ~/dotfiles/install.sh
 sed -n '/'$INSTALL_TYPE'/q;p' ~/BattleArch/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
